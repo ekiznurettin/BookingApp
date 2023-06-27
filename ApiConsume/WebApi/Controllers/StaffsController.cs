@@ -27,7 +27,7 @@ namespace WebApi.Controllers
             _staffManager.T_Insert(staff);
             return Ok();
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteStaff(int id)
         {
             var resut = _staffManager.T_GetById(id);
